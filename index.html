@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website for the Staying Up Podcast">
+    <meta name="author" content="Saylor Brock-Allison">
+    <meta name="viewport" content="width=1280">
+    <title>Staying Up Podcast</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header id="home">
+        <div class="title-container">
+            <div class="title-left">
+                <span class="main-title">Staying Up</span>
+            </div>
+            <div class="title-center">
+                <span class="subtitle">with cammie</span>
+                <span class="subtitle">and taryn</span>
+            </div>
+            <div class="title-right" id="listen">
+                <div id="platform-tabs">
+                    <ul>
+                        <li><a href="#tab-spotify">Spotify</a></li>
+                        <li><a href="#tab-apple">Apple</a></li>
+                    </ul>
+                    <div id="tab-spotify">
+                        <a href="https://open.spotify.com/show/0RyT8ylEQVePd7OqztZxZz" target="_blank">
+                            <img src="images/spotify.png" alt="Spotify" width="100">
+                        </a>
+                    </div>
+                    <div id="tab-apple">
+                        <a href="https://podcasts.apple.com/us/podcast/staying-up-with-cammie-and-taryn/id1523766472" target="_blank">
+                            <img src="images/apple.png" alt="Apple Podcasts" width="100">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#video">watch</a>
+            <a href="#listen">listen</a>
+            <a href="#merch">merch</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>about</h2>
+        <div class="about-content">
+            <img src="images/tarmie.jpeg" alt="image of Cammie and Taryn" width="350px"> 
+            <!-- This image comes from their social media profile picture -->
+            <p>By lovebirds Cammie and Taryn Arnold Scott, Staying Up is a podcast. These lesbians have a sleepover every night, and every week, you're invited to join. From deep talks to hot goss, Taryn and Cammie are awake and ready.</p>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2>the pp zone</h2>
+        <h3>Watch with Us</h3>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn left">&lt;</button>
+            <div id="video-carousel" class="carousel"></div>
+            <button class="carousel-btn right">&gt;</button>
+        </div>
+    </section>
+
+    <section id="merch">
+        <h2>merch</h2>
+        <div class="merch-carousel">
+            <div class="merch-slide">
+              <img src="images/shirt.png" alt="shirt with Cammie and Taryn">
+              <!-- This image I created on photoshop -->
+              <div class="caption">
+                <p>Staying Up Pod T-shirt</p>
+                <p>$25</p>
+                <a href="#" class="buy-btn" target="_blank">Buy Now</a>
+              </div>
+            </div>
+          
+            <div class="merch-slide">
+              <img src="images/hat.png" alt="Cousin Bobby hat">
+              <!-- I also created this -->
+              <div class="caption">
+                <p>"Cousin Bobby" Hat - iconic headwear</p>
+                <p>$15</p>
+                <a href="#" class="buy-btn" target="_blank">Buy Now</a>
+              </div>
+            </div>
+          
+            <div class="merch-slide">
+              <img src="images/tumler.webp" alt="Tumler Deck">
+              <!-- This comes from the official Tumler Deck website -->
+              <div class="caption">
+                <p>The Tumler Deck - 52 card convo starter</p>
+                <p>$23</p>
+                <a href="https://tumlerdeck.com/products/the-tumler-deck-first-edition" class="buy-btn" target="_blank">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+
+    <section id="contact">
+        <h2>contact us</h2>
+        <h4>
+            pp hotline: 
+            <a href="tel:3235778857">
+                <!-- This phone number actually links to their hotline -->
+              <span>
+                📞 323-577-8857
+              </span>
+            </a>
+          </h4>
+
+          <form id="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label class="radio-heading">This is a</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="type" value="Question"> question</label>
+                    <label><input type="radio" name="type" value="Topic"> topic</label>
+                    <label><input type="radio" name="type" value="Rant"> rant</label>
+                    <label><input type="radio" name="type" value="PP of the weeky submission"> pp of the weeky submission</label>
+                    <label><input type="radio" name="type" value="Other" id="radio-other"> other</label>
+                </div>
+                <div class="form-group" id="other-text-container" style="display: none;">
+                    <input type="text" name="otherText" id="other-text" placeholder="Please specify...">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="First Name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="handle">Social Media Handle:</label>
+                <input type="text" id="handle" name="handle" placeholder="Please include which social media">
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us something" required></textarea>
+            </div>
+    
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button type="button" id="clear-form" class="clear-button">Clear Form</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>
+                <a href="https://www.instagram.com/stayinguppod" target="_blank">StayingUp Podcast</a> |
+                <a href="https://www.instagram.com/cammiescott" target="_blank">Cammie Scott</a> |
+                <a href="https://www.instagram.com/tarynarnoldscott" target="_blank">Taryn Arnold Scott</a> |
+                <a href="https://tumlerdeck.com/" target="_blank">Tumler Deck Official Site</a>
+            </p>
+            <p>&copy; 2025 Staying Up. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
